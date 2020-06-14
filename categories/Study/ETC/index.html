@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="generator" content="Hexo 4.2.0"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>Category: ETC - 개발계발 블로그</title><meta property="og:type" content="blog"><meta property="og:title" content="개발계발 블로그"><meta property="og:url" content="https://jyejin.github.io/"><meta property="og:site_name" content="개발계발 블로그"><meta property="og:locale" content="en_US"><meta property="article:author" content="Yejin Jeong"><meta property="twitter:card" content="summary"><meta property="twitter:image" content="https://jyejin.github.io/img/og_image.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://jyejin.github.io"},"headline":"개발계발 블로그","image":["https://jyejin.github.io/img/og_image.png"],"author":{"@type":"Person","name":"Yejin Jeong"},"description":""}</script><link rel="icon" href="/img/berry.png"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css"><link rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css"><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script></head><body class="is-2-column"><nav class="navbar navbar-main"><div class="container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/">개발계발</a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item search" title="Search" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-8-widescreen"><div class="card"><div class="card-content"><nav class="breadcrumb" aria-label="breadcrumbs"><ul><li><a href="/categories">Categories</a></li><li><a href="/categories/Study/">Study</a></li><li class="is-active"><a href="#" aria-current="page">ETC</a></li></ul></nav></div></div><div class="card"><article class="card-content article" role="article"><div class="article-meta size-small is-uppercase level is-mobile"><div class="level-left"><time class="level-item" dateTime="2020-06-14T06:30:33.000Z" title="2020-06-14T06:30:33.000Z">2020-06-14</time><span class="level-item"><a class="link-muted" href="/categories/Study/">Study</a><span> / </span><a class="link-muted" href="/categories/Study/ETC/">ETC</a></span><span class="level-item">13 minutes read (About 1927 words)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2020/06/14/study2-1/">&lt;클린 코드&gt; 좋았던 내용 기록하기(1-3장)</a></h1><div class="content"><br/>
+
+<h2 id="1장-깨끗한-코드"><a href="#1장-깨끗한-코드" class="headerlink" title="1장. 깨끗한 코드"></a>1장. 깨끗한 코드</h2><p>시간에 쫓겨서 급하게 나쁜 코드를 짠 적이 있을 것이다. 나중에 다시 짜야지라는 생각으로 급하게 코드를 짜고는 하지만 나중은 오지 않는다.</p>
+<p>깨끗한 코드를 짜기 위해서는 코드 감각이 필요하다. 깨끗한 코드란 그 정의도 다양하지만 대충의 의견은 다음과 같다.</p>
+<ol>
+<li>논리가 간단해서 버그가 숨어들지 한다. 한 가지를 제대로 한다.</li>
+<li>잘 쓴 문장처럼 읽힌다. </li>
+<li>작성자가 아닌 사람도 읽기 쉽고 고치기 쉽다.</li>
+<li>테스트 코드가 없는 코드는 깨끗한 코드가 아니다.</li>
+<li>중복을 피해야 한다.</li>
+</ol>
+<p>정리 : 중복을 피하라. 한 기능만 수행해라. 제대로 표현하라. 작게 추상화하라</p>
+<h2 id="2장-의미있는-이름"><a href="#2장-의미있는-이름" class="headerlink" title="2장. 의미있는 이름"></a>2장. 의미있는 이름</h2><h3 id="의도를-분명하게-밝혀라"><a href="#의도를-분명하게-밝혀라" class="headerlink" title="의도를 분명하게 밝혀라"></a>의도를 분명하게 밝혀라</h3><ul>
+<li>Int d; ⇒ int daysSincedCreation;</li>
+<li>List ⇒ group, bunch</li>
+</ul>
+<h3 id="의미-있게-구분하라"><a href="#의미-있게-구분하라" class="headerlink" title="의미 있게 구분하라"></a>의미 있게 구분하라</h3><ul>
+<li>차이를 알도록 이름을 지어야 한다.<ul>
+<li>나쁜 예시 : GetActiveAccount(), GetActiveAccounts(), GetActiveAccountInfo()</li>
+<li>나쁜 예시2 : CustomerInfo/customer, accountdata/account</li>
+</ul>
+</li>
+<li>문자 하나만 사용하는 변수 이름은 문제가 있다.<ul>
+<li>루프에서 반복 횟수를 세는 i,j,k는 괜찮다(l은 절대 안됨). 단, 루프 범위가 아주 작고 다른 이름과 충돌하지 않을 때만 괜찮다.</li>
+</ul>
+</li>
+</ul>
+<h3 id="해법-영역에서-가져온-이름을-사용하라"><a href="#해법-영역에서-가져온-이름을-사용하라" class="headerlink" title="해법 영역에서 가져온 이름을 사용하라"></a>해법 영역에서 가져온 이름을 사용하라</h3><p> 코드를 읽는 사람도 프로그래머이다. 그러므로 전산용어, 알고리즘 이름 등을 사용해도 괜찮다. 모든 명칭을 문제 영역에서 가져올 것이 아니라, 기술 개념에는 기술 이름을 가져오는 것이 가장 적합한 선택이다.  적합한 프로그래머 용어가 없을 때, 문제 영역에서 이름을 가져온다.</p>
+<p>** 문제 영역이란, 코드를 짜려는 프로젝트에 쓰이는 명칭 들을 말하는 것으로 보임. 예를 들면, 금리 관련 프로젝트에서는 정액제, 만기 등을 사용하는 것.</p>
+<h3 id="의미있는-맥락을-추가하라"><a href="#의미있는-맥락을-추가하라" class="headerlink" title="의미있는 맥락을 추가하라"></a>의미있는 맥락을 추가하라</h3><p>예를 들어, firstName, city, street, houseNumber, state, zipcode라는 변수가 있다. 변수를 전체적으로 보면 주소라는 사실을 알 수 있지만 state변수 하나만으로는 쉽게 알아채기 어렵다. 이럴 때는 addr이라는 접두어를 추가해 addrFirstName, addrLastName, addrState라 쓰면 맥락이 좀 더 분명해진다.</p>
+<h2 id="3장-함수"><a href="#3장-함수" class="headerlink" title="3장. 함수"></a>3장. 함수</h2><h3 id="작게-만들어라"><a href="#작게-만들어라" class="headerlink" title="작게 만들어라!"></a>작게 만들어라!</h3><p>함수를 만드는 첫째 규칙은 ‘작게!’다. 둘 째 규칙은 ‘더 작게!’이다. 함수는 100줄을 넘어서는 안된다. 20줄도 길다…</p>
+<p>다시 말해, if문/else문/while문 등에 들어가는 블록은 한 줄이어야 한다는 의미이다. 대개 거기서 함수를 호출한다.</p>
+<h3 id="한-가지만-해라"><a href="#한-가지만-해라" class="headerlink" title="한 가지만 해라!"></a>한 가지만 해라!</h3><p>충고 : <strong>함수는 한 가지를 해야 한다. 그 한가지를 잘해야 한다. 그 한가지 만을 해야한다.</strong></p>
+<p>이 충고의 문제는 한 가지가 무엇인지 알기가 어렵다는 점이다. </p>
+<p>3-3을 보자.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//3-3</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> String <span class="title">renderPageWithSetupsAndTeardowns</span><span class="params">(PageData PageData,</span></span></span><br><span class="line"><span class="function"><span class="params"><span class="keyword">boolean</span> isSuite)</span> <span class="keyword">throws</span> Exception</span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(isTestPage(pageData))</span><br><span class="line">		includeSetupAndTeardownPages(pageData, isSuite);</span><br><span class="line">	<span class="keyword">return</span> pageData.getHtml()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>목록 3-3은 한가지만 하는가? 세가지를 한다고 주장할 수도 있다.</p>
+<ol>
+<li>페이지가 테스트페이지인지 판단한다.</li>
+<li>그렇다면 설정 페이지와 해제 페이지를 넣는다.</li>
+<li>페이지를 HTML로 렌더링한다.</li>
+</ol>
+<p>위에서 언급하는 세 단계는 지정된 함수 이름 아래에서 추상화 수준이 하나다. 함수는 간단한 <code>TO</code>문단으로 기술할 수 있다.</p>
+<p>** <code>TO</code> : LOGO 언어에서 사용하는 함수 선언 방식으로, 파이썬이나 루비의 <code>def</code>와 같다.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">TO RenderPageWithSetupAndTeardowns, </span><br><span class="line">페이지가 테스트 페이지인지 확인한 후 테스트 페이지라면 설정 페이지와 해제 페이지를 넣는다.</span><br><span class="line">테스트 페이지든 아니든 페이지를 HTML로 렌더링한다.</span><br></pre></td></tr></table></figure>
+
+<p>정리하면, 지정된 함수 이름 아래에서 추상화 수준이 하나인 단계만 수행한다면 그 함수는 한가지 작업만 한다고 볼 수 있다. 또 다른 방법은, 단순히 다른 표현이 아니라 의미있는 이름으로 다른 함수를 추출할 수 있다면 그 함수는 여러작업을 하는 셈이다.</p>
+<h3 id="함수-당-추상화-수준은-하나로-⭐"><a href="#함수-당-추상화-수준은-하나로-⭐" class="headerlink" title="함수 당 추상화 수준은 하나로!⭐"></a>함수 당 추상화 수준은 하나로!⭐</h3><p>함수가 확실히 한 가지 작업만 하려면 함수 내 모든 문장의 추상화 수준이 동일해야한다. 함수 호출 <code>getHtml()</code> 은 추상화 수준이 높다. 그리고 모듈을 사용한 변수 선언(?) <code>String pagePathName = PathParser.render(pagepath);</code>는 추상화 수준이 중간이다. 그리고<code>.append(“\n”)</code>와 같은 코드는 추상화 수준이 낮다.</p>
+<p>한 함수내의 추상화 수준을 섞으면. 코드를 읽는 사람이 헷갈린다.</p>
+<h3 id="내려가기-규칙"><a href="#내려가기-규칙" class="headerlink" title="내려가기 규칙"></a>내려가기 규칙</h3><p>코드는 위에서 아래로 이야기처럼 읽혀야 좋다. 한 함수 다음에는 추상화 수준이 한 단계 낮은 함수가 온다. 즉, 위에서 아래로 프로그램을 읽으면서 추상화 수준이 한 단계씩 낮아지는 것이다.</p>
+<h3 id="서술적인-이름을-사용하라"><a href="#서술적인-이름을-사용하라" class="headerlink" title="서술적인 이름을 사용하라!"></a>서술적인 이름을 사용하라!</h3><p>함수 이름은 함수 내용이 짐작 가능할 수 있어야 한다. 함수 이름이 길어도 괜찮다. 길고 서술적인 이름이 짧고 어려운 이름보다 좋다. 길고 서술적인 이름이 길고 서술적인 주석보다 좋다. 이름을 정하느라 시간을 들여도 괜찮다.</p>
+<h3 id="함수-인수"><a href="#함수-인수" class="headerlink" title="함수 인수"></a>함수 인수</h3><p>함수에서 이상적인 인수 개수는 0개이다. 4개이상은 사용하지 않는게 좋다. </p>
+<ol>
+<li>인수가 1개인 경우</li>
+</ol>
+<ul>
+<li>인수에 질문을 던지는 경우<ul>
+<li>Boolean fileExists(“MyFile”)</li>
+</ul>
+</li>
+<li>인수를 뭔가로 변환해 결과를 반환하는 경우<ul>
+<li>InputStream fileOpen(“MyFile”)</li>
+</ul>
+</li>
+<li>이벤트 발생 ⇒ 출력 인수 없이 시스템 상태를 바꾼다.</li>
+</ul>
+<ol start="2">
+<li>플래그 인수</li>
+</ol>
+<p>플래그 인수는 추하다. 함수로 부울 값을 넘기는 관례는 정말로 끔찍하다. 함수가 한꺼번에 여러 가지를 처리한다고 대놓고 공표하는 셈이니까…!</p>
+<ol start="3">
+<li>인수가 2개인 함수</li>
+</ol>
+<ul>
+<li>2개가 적절한 경우도 있지만(예, 좌표를 찍는 함수 x축,y축) 단항 함수로 바꾸도록 애써야 한다.</li>
+</ul>
+<ol start="4">
+<li>인수가 3개인 함수</li>
+</ol>
+<ul>
+<li>이해하기 어렵다. 신중히 고려하라..</li>
+</ul>
+<p>인수 객체가 2-3개 필요하다면 일부를 독자적인 클래스 변수로 선언할 가능성을 짚어보자.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">Circle <span class="title">makeCircle</span><span class="params">(<span class="keyword">double</span> x, <span class="keyword">double</span> y, <span class="keyword">double</span> radius)</span></span></span><br><span class="line"><span class="function">Circle <span class="title">makeCircle</span><span class="params">(Point center, <span class="keyword">double</span> radius)</span></span></span><br></pre></td></tr></table></figure>
+
+<h3 id="명령과-조회를-분리해라"><a href="#명령과-조회를-분리해라" class="headerlink" title="명령과 조회를 분리해라!"></a>명령과 조회를 분리해라!</h3><p>함수는 뭔가를 수행하거나 뭔가에 답하거나 둘 중하나만 해야한다. 아래 코드는 명령과 조회를 함께한다.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(set(<span class="string">"username"</span>, <span class="string">"unclebob"</span>))</span><br></pre></td></tr></table></figure>
+
+<p>명령과 조회를 분리해 혼란을 없애야 한다.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(attributeExists(<span class="string">"username"</span>))&#123;</span><br><span class="line">	setAttribute(<span class="string">"username"</span>, <span class="string">"unclebob"</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="오류-코드보다-예외를-사용하라"><a href="#오류-코드보다-예외를-사용하라" class="headerlink" title="오류 코드보다 예외를 사용하라!"></a>오류 코드보다 예외를 사용하라!</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(deletePage(page) == E_OK)</span><br></pre></td></tr></table></figure>
+
+<p>위 코드는 여러 단계로 중첩되는 코드를 야기한다. 오류 코드를 반환하면 호출자는 오류 코드를 바로 처리해야 한다. 반면 예외를 사용하면 오류 처리 코드가 원래 코드에서 분리되므로 코드가 깔끔해진다.</p>
+<p><strong>&lt; Clean Code &gt; 도서의 내용을 공부하며 요약 정리하였습니다.</strong></p>
+</div></article></div></div><!--!--><div class="column column-right is-4-tablet is-4-desktop is-4-widescreen  order-3"><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">Categories</h3><ul class="menu-list"><li><a class="level is-mobile is-marginless" href="/categories/Book/"><span class="level-start"><span class="level-item">Book</span></span><span class="level-end"><span class="level-item tag">11</span></span></a><ul class="mr-0"><li><a class="level is-mobile is-marginless" href="/categories/Book/%EB%A6%AC%EC%96%BC%EC%9B%94%EB%93%9C-HTTP/"><span class="level-start"><span class="level-item">리얼월드 HTTP</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/Book/%EB%B0%91%EB%B0%94%EB%8B%A5%EB%B6%80%ED%84%B0-%EC%8B%9C%EC%9E%91%ED%95%98%EB%8A%94-%EB%94%A5%EB%9F%AC%EB%8B%9D/"><span class="level-start"><span class="level-item">밑바닥부터 시작하는 딥러닝</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/Book/%EC%9D%B8%EC%82%AC%EC%9D%B4%EB%93%9C-%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8/"><span class="level-start"><span class="level-item">인사이드 자바스크립트</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li></ul></li><li><a class="level is-mobile is-marginless" href="/categories/Project/"><span class="level-start"><span class="level-item">Project</span></span><span class="level-end"><span class="level-item tag">6</span></span></a><ul class="mr-0"><li><a class="level is-mobile is-marginless" href="/categories/Project/DeepLearningFromForR/"><span class="level-start"><span class="level-item">DeepLearningFromForR</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/Project/Roadmap2020/"><span class="level-start"><span class="level-item">Roadmap2020</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li></ul></li><li><a class="level is-mobile is-marginless" href="/categories/Study/"><span class="level-start"><span class="level-item">Study</span></span><span class="level-end"><span class="level-item tag">3</span></span></a><ul class="mr-0"><li><a class="level is-mobile is-marginless" href="/categories/Study/ETC/"><span class="level-start"><span class="level-item">ETC</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/Study/Network/"><span class="level-start"><span class="level-item">Network</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li></ul></li></ul></div></div></div><div class="card widget"><div class="card-content"><h3 class="menu-label">Recent</h3><article class="media"><div class="media-content size-small"><p><time dateTime="2020-06-14T06:30:33.000Z">2020-06-14</time></p><p class="title is-6"><a class="link-muted" href="/2020/06/14/study2-1/">&lt;클린 코드&gt; 좋았던 내용 기록하기(1-3장)</a></p><p class="is-uppercase"><a class="link-muted" href="/categories/Study/">Study</a> / <a class="link-muted" href="/categories/Study/ETC/">ETC</a></p></div></article><article class="media"><div class="media-content size-small"><p><time dateTime="2020-06-06T05:43:06.000Z">2020-06-06</time></p><p class="title is-6"><a class="link-muted" href="/2020/06/06/study1-2/">CORS(Cross Origin Resource Sharing)</a></p><p class="is-uppercase"><a class="link-muted" href="/categories/Study/">Study</a> / <a class="link-muted" href="/categories/Study/Network/">Network</a></p></div></article><article class="media"><div class="media-content size-small"><p><time dateTime="2020-06-02T05:29:56.000Z">2020-06-02</time></p><p class="title is-6"><a class="link-muted" href="/2020/06/02/book3-3/">XMLHttpRequest 와 Fetch API</a></p><p class="is-uppercase"><a class="link-muted" href="/categories/Book/">Book</a> / <a class="link-muted" href="/categories/Book/%EB%A6%AC%EC%96%BC%EC%9B%94%EB%93%9C-HTTP/">리얼월드 HTTP</a></p></div></article><article class="media"><div class="media-content size-small"><p><time dateTime="2020-05-31T04:38:26.000Z">2020-05-31</time></p><p class="title is-6"><a class="link-muted" href="/2020/05/31/book3-2/">쿠키, 세션, 캐시</a></p><p class="is-uppercase"><a class="link-muted" href="/categories/Book/">Book</a> / <a class="link-muted" href="/categories/Book/%EB%A6%AC%EC%96%BC%EC%9B%94%EB%93%9C-HTTP/">리얼월드 HTTP</a></p></div></article><article class="media"><div class="media-content size-small"><p><time dateTime="2020-05-22T06:51:52.000Z">2020-05-22</time></p><p class="title is-6"><a class="link-muted" href="/2020/05/22/book3-1/">헤더와 바디</a></p><p class="is-uppercase"><a class="link-muted" href="/categories/Book/">Book</a> / <a class="link-muted" href="/categories/Book/%EB%A6%AC%EC%96%BC%EC%9B%94%EB%93%9C-HTTP/">리얼월드 HTTP</a></p></div></article></div></div><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">Archives</h3><ul class="menu-list"><li><a class="level is-mobile is-marginless" href="/archives/2020/06/"><span class="level-start"><span class="level-item">June 2020</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2020/05/"><span class="level-start"><span class="level-item">May 2020</span></span><span class="level-end"><span class="level-item tag">7</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2020/04/"><span class="level-start"><span class="level-item">April 2020</span></span><span class="level-end"><span class="level-item tag">11</span></span></a></li></ul></div></div></div><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">Tags</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/book/"><span class="tag">book</span><span class="tag is-grey-lightest">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/dns/"><span class="tag">dns</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/http/"><span class="tag">http</span><span class="tag is-grey-lightest">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/js/"><span class="tag">js</span><span class="tag is-grey-lightest">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/network/"><span class="tag">network</span><span class="tag is-grey-lightest">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/programming/"><span class="tag">programming</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/project/"><span class="tag">project</span><span class="tag is-grey-lightest">11</span></a></div><div class="control"><a class="tags has-addons" href="/tags/roadmap/"><span class="tag">roadmap</span><span class="tag is-grey-lightest">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/study/"><span class="tag">study</span><span class="tag is-grey-lightest">12</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%EB%94%A5%EB%9F%AC%EB%8B%9D/"><span class="tag">딥러닝</span><span class="tag is-grey-lightest">8</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%EB%AA%A8%EB%8D%B8%EB%A7%81/"><span class="tag">모델링</span><span class="tag is-grey-lightest">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%EB%AA%A8%EB%8D%B8%ED%95%99%EC%8A%B5/"><span class="tag">모델학습</span><span class="tag is-grey-lightest">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%EB%B0%B1%EC%97%94%EB%93%9C/"><span class="tag">백엔드</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%EC%88%9C%EC%A0%84%ED%8C%8C/"><span class="tag">순전파</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%EC%97%AD%EC%A0%84%ED%8C%8C/"><span class="tag">역전파</span><span class="tag is-grey-lightest">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%ED%94%84%EB%A1%A0%ED%8A%B8%EC%97%94%EB%93%9C/"><span class="tag">프론트엔드</span><span class="tag is-grey-lightest">1</span></a></div></div></div></div></div></div></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/">개발계발</a><p class="size-small"><span>&copy; 2020 Yejin Jeong</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script>moment.locale("en");</script><script>var IcarusThemeSettings = {
+            site: {
+                url: 'https://jyejin.github.io',
+                external_link: {"enable":true,"exclude":[]}
+            },
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script src="/js/animation.js"></script><a id="back-to-top" title="Back to Top" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><!--!--><script src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="Type something..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"Type something...","untitled":"(Untitled)","posts":"Posts","pages":"Pages","categories":"Categories","tags":"Tags"});
+        });</script></body></html>
