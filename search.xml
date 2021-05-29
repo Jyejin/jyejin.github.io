@@ -4,6 +4,27 @@
   
     
     <entry>
+      <title>python 비트연산과 shift 방법 및 활용</title>
+      <link href="2021/05/29/study6/"/>
+      <url>2021/05/29/study6/</url>
+      
+        <content type="html"><![CDATA[<br/><p>python 비트(bit) 연산과 shift(&amp;, |, &gt;&gt;, &lt;&lt;)의 사용 방법과 활용법에 대해 알아보자.</p><a id="more"></a> <hr><h1 id="비트-연산"><a href="#비트-연산" class="headerlink" title="비트 연산"></a>비트 연산</h1><p>비트 연산은 이진수로 논리 연산을 한다. 논리 연산에는 AND, OR, XOR, NAND가 있다. 하나씩 살펴보자.</p><h3 id="amp-AND-연산"><a href="#amp-AND-연산" class="headerlink" title="&amp; (AND) 연산"></a>&amp; (AND) 연산</h3>  <img src="/gallery/book1-1-4.jpg" width="200px" /><p>아래와 같이 두 비트의 연산에서 둘 다 1인 경우에만 1을 반환한다.</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="number">1</span> &amp; <span class="number">1</span></span><br><span class="line"><span class="number">1</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="number">1</span> &amp; <span class="number">0</span></span><br><span class="line"><span class="number">0</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="number">0</span> &amp; <span class="number">0</span></span><br><span class="line"><span class="number">0</span></span><br></pre></td></tr></table></figure><h3 id="OR-연산"><a href="#OR-연산" class="headerlink" title="| (OR) 연산"></a>| (OR) 연산</h3><h3 id="XOR-연산"><a href="#XOR-연산" class="headerlink" title="^ (XOR) 연산"></a>^ (XOR) 연산</h3><h3 id="NAND-연산"><a href="#NAND-연산" class="headerlink" title="~ (NAND) 연산"></a>~ (NAND) 연산</h3><h1 id="비트-shift"><a href="#비트-shift" class="headerlink" title="비트 shift"></a>비트 shift</h1><h3 id="lt-lt-왼쪽-shift"><a href="#lt-lt-왼쪽-shift" class="headerlink" title="&lt;&lt; 왼쪽 shift"></a>&lt;&lt; 왼쪽 shift</h3><h3 id="gt-gt-오른쪽-shift"><a href="#gt-gt-오른쪽-shift" class="headerlink" title="&gt;&gt; 오른쪽 shift"></a>&gt;&gt; 오른쪽 shift</h3>]]></content>
+      
+      
+      <categories>
+          
+          <category> Study </category>
+          
+          <category> ETC </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>로그인 상태 유지 원리</title>
       <link href="2021/05/26/study5/"/>
       <url>2021/05/26/study5/</url>
