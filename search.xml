@@ -4,6 +4,39 @@
   
     
     <entry>
+      <title>nginx, php-fpm 연동하기</title>
+      <link href="2021/06/30/study9/"/>
+      <url>2021/06/30/study9/</url>
+      
+        <content type="html"><![CDATA[<br/><p>nginx와 php-fpm 연동 시나리오를 살펴보자.</p><a id="more"></a> <hr>]]></content>
+      
+      
+      <categories>
+          
+          <category> Study </category>
+          
+          <category> ETC </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> backend </tag>
+            
+            <tag> nginx </tag>
+            
+            <tag> php-fpm </tag>
+            
+            <tag> server </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>push 방식, poll 방식</title>
       <link href="2021/06/03/study8/"/>
       <url>2021/06/03/study8/</url>
