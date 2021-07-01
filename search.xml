@@ -4,6 +4,37 @@
   
     
     <entry>
+      <title>WSGI, ASGI, WAS 개념 정리</title>
+      <link href="2021/07/01/study10/"/>
+      <url>2021/07/01/study10/</url>
+      
+        <content type="html"><![CDATA[<br/><p>헷갈리는 용어들을 정리해보자.</p><a id="more"></a> <hr>]]></content>
+      
+      
+      <categories>
+          
+          <category> Study </category>
+          
+          <category> ETC </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> wsgi </tag>
+            
+            <tag> asgi </tag>
+            
+            <tag> was </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>nginx, php-fpm 연동하기</title>
       <link href="2021/06/30/study9/"/>
       <url>2021/06/30/study9/</url>
