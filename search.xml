@@ -4,6 +4,27 @@
   
     
     <entry>
+      <title>TIL 3. 프로그래머스 타겟넘버</title>
+      <link href="2021/07/19/TIL3/"/>
+      <url>2021/07/19/TIL3/</url>
+      
+        <content type="html"><![CDATA[<br/><p>2021-07-19 TIL</p><a id="more"></a> <hr><ol><li>프로그래머스 타겟 넘버</li></ol><ul><li>문제 유형 : DFS</li><li>다시 풀어보기</li></ul><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">def solution(numbers, target):</span><br><span class="line">    result &#x3D; 0</span><br><span class="line">    answer &#x3D; dfs(result, numbers, target)</span><br><span class="line">    return answer</span><br><span class="line"></span><br><span class="line">def dfs(result, numbers, target):</span><br><span class="line">    if len(numbers) &#x3D;&#x3D; 1:</span><br><span class="line">        if result + numbers[0] &#x3D;&#x3D; target or result - numbers[0] &#x3D;&#x3D; target:</span><br><span class="line">            return 1</span><br><span class="line">        else: </span><br><span class="line">            return 0</span><br><span class="line">    else:</span><br><span class="line">        return dfs(result + numbers[0], numbers[1:], target) + dfs(result - numbers[0], numbers[1:], target)</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 다시풀어보기 </tag>
+            
+            <tag> til </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>TIL 2. 데코레이터 패턴, 알고리즘 문제</title>
       <link href="2021/07/18/TIL2/"/>
       <url>2021/07/18/TIL2/</url>
