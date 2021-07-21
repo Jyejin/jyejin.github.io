@@ -4,19 +4,48 @@
   
     
     <entry>
-      <title>TIL 3. 프로그래머스 타겟넘버</title>
+      <title>#python 프로그래머스 124 나라 </title>
+      <link href="2021/07/21/til4/"/>
+      <url>2021/07/21/til4/</url>
+      
+        <content type="html"><![CDATA[<br/><p>2021-07-21 TIL</p><a id="more"></a> <hr><p><a href="https://programmers.co.kr/learn/courses/30/lessons/12899">프로그래머스 124 나라</a></p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">solution</span><span class="params">(n)</span>:</span></span><br><span class="line">    nums = [<span class="string">'1'</span>,<span class="string">'2'</span>,<span class="string">'4'</span>]</span><br><span class="line">    <span class="keyword">if</span> n &lt;= <span class="number">3</span>:</span><br><span class="line">        <span class="keyword">return</span> nums[n<span class="number">-1</span>]</span><br><span class="line"></span><br><span class="line">    q, r = divmod(n<span class="number">-1</span>, <span class="number">3</span>)</span><br><span class="line">    <span class="keyword">return</span> solution(q) + nums[r]</span><br></pre></td></tr></table></figure><h3 id="풀이"><a href="#풀이" class="headerlink" title="풀이"></a>풀이</h3><p>3진법을 사용해서 푸는 문제. 진법은 0부터 시작하지만 124 나라는 자연수이므로 n에서 1을 뺀 후 나머지를 구하고<br>0,1,2 대신 1,2,4를 사용해서 표현한다.</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> TIL </tag>
+            
+            <tag> 프로그래머스 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>프로그래머스 타겟넘버</title>
       <link href="2021/07/19/TIL3/"/>
       <url>2021/07/19/TIL3/</url>
       
         <content type="html"><![CDATA[<br/><p>2021-07-19 TIL</p><a id="more"></a> <hr><ol><li>프로그래머스 타겟 넘버</li></ol><ul><li>문제 유형 : DFS</li><li>다시 풀어보기</li></ul><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">def solution(numbers, target):</span><br><span class="line">    result &#x3D; 0</span><br><span class="line">    answer &#x3D; dfs(result, numbers, target)</span><br><span class="line">    return answer</span><br><span class="line"></span><br><span class="line">def dfs(result, numbers, target):</span><br><span class="line">    if len(numbers) &#x3D;&#x3D; 1:</span><br><span class="line">        if result + numbers[0] &#x3D;&#x3D; target or result - numbers[0] &#x3D;&#x3D; target:</span><br><span class="line">            return 1</span><br><span class="line">        else: </span><br><span class="line">            return 0</span><br><span class="line">    else:</span><br><span class="line">        return dfs(result + numbers[0], numbers[1:], target) + dfs(result - numbers[0], numbers[1:], target)</span><br></pre></td></tr></table></figure>]]></content>
       
       
+      <categories>
+          
+          <category> Study </category>
+          
+          <category> Algorithm </category>
+          
+      </categories>
+      
       
         <tags>
             
-            <tag> 다시풀어보기 </tag>
+            <tag> TIL </tag>
             
-            <tag> til </tag>
+            <tag> 다시풀어보기 </tag>
             
         </tags>
       
@@ -32,6 +61,20 @@
         <content type="html"><![CDATA[<br/><p>2021-07-18 TIL</p><a id="more"></a> <hr><h2 id="디자인-원칙"><a href="#디자인-원칙" class="headerlink" title="디자인 원칙"></a>디자인 원칙</h2><ul><li>클래스는 확장에 대해서는 열려 있어야 하지만 코드 변경에 대해서는 닫혀 있어야 한다.</li></ul><h2 id="데코레이터-패턴"><a href="#데코레이터-패턴" class="headerlink" title="데코레이터 패턴"></a>데코레이터 패턴</h2><p>데코레이터 패턴은 객체에 추가적인 요건을 동작으로 추가한다. 데코레이터는 서브클래스를 만드는 것을 통해서 기능을 유연하게 확장할 수 있는 방법을 제공한다.</p><h2 id="알고리즘"><a href="#알고리즘" class="headerlink" title="알고리즘"></a>알고리즘</h2><p><a href="https://programmers.co.kr/learn/courses/30/lessons/64061">크레인 인형 뽑기 게임</a></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">def solution(board, moves):            </span><br><span class="line">    answer &#x3D; 0</span><br><span class="line">    stack &#x3D; []</span><br><span class="line">    height &#x3D; len(board)</span><br><span class="line">    width &#x3D; len(board[0])</span><br><span class="line">    </span><br><span class="line">    for m in moves:</span><br><span class="line">        col_num &#x3D; m - 1</span><br><span class="line">        for w in range(0, height):</span><br><span class="line">            selected_v &#x3D; board[w][col_num]</span><br><span class="line">            if selected_v &gt; 0:</span><br><span class="line">                stack.append(selected_v)</span><br><span class="line">                board[w][col_num] &#x3D; 0</span><br><span class="line"></span><br><span class="line">                if len(stack) &gt; 1:</span><br><span class="line">                    if stack[-1] &#x3D;&#x3D; stack[-2]:</span><br><span class="line">                        del stack[-1]</span><br><span class="line">                        del stack[-1]</span><br><span class="line">                        answer +&#x3D; 2</span><br><span class="line">                break</span><br><span class="line">                </span><br><span class="line">    return answer</span><br></pre></td></tr></table></figure>]]></content>
       
       
+      <categories>
+          
+          <category> Study </category>
+          
+          <category> TIL </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> TIL </tag>
+            
+        </tags>
       
     </entry>
     
