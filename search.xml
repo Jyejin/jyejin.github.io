@@ -4,6 +4,27 @@
   
     
     <entry>
+      <title>퀵 정렬(Quick Sort)</title>
+      <link href="2021/09/20/algo5/"/>
+      <url>2021/09/20/algo5/</url>
+      
+        <content type="html"><![CDATA[<br/><p>퀵 정렬 구현하기</p><a id="more"></a> <hr><p>퀵 정렬</p><ul><li>복잡도 : O(nlogn)</li><li>순서<ol><li>기준 값이 되는 피벗 값을 구한다. (리스트의 첫번째)</li><li>피벗 값보다 작은 값을 왼쪽에, 큰 값을 오른쪽에 위치시킨다.</li><li>분류가 끝나면 왼쪽, 오른쪽 각각의 피벗을 구해 1번부터 다시 반복한다.</li></ol></li></ul><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">array = [<span class="number">5</span>, <span class="number">7</span>, <span class="number">9</span>, <span class="number">0</span>, <span class="number">3</span>, <span class="number">1</span>, <span class="number">6</span>, <span class="number">2</span>, <span class="number">4</span>, <span class="number">8</span>]</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">quick_sort</span><span class="params">(array)</span>:</span></span><br><span class="line">    <span class="keyword">if</span> len(array) &lt;= <span class="number">1</span>:</span><br><span class="line">        <span class="keyword">return</span> array</span><br><span class="line">    </span><br><span class="line">    pivot = array[<span class="number">0</span>]</span><br><span class="line">    </span><br><span class="line">    left = []</span><br><span class="line">    right = []</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> array[<span class="number">1</span>:]:</span><br><span class="line">        <span class="keyword">if</span> i &gt; pivot:</span><br><span class="line">            right.append(i)</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            left.append(i)</span><br><span class="line">    result = quick_sort(left) + [pivot] + quick_sort(right)</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> result</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> Study </category>
+          
+          <category> Algorithm </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>[디자인패턴] 팩토리 메소드 패턴 with python</title>
       <link href="2021/08/01/project5-3/"/>
       <url>2021/08/01/project5-3/</url>
@@ -319,13 +340,13 @@
       
         <tags>
             
-            <tag> backend </tag>
-            
             <tag> nginx </tag>
             
-            <tag> server </tag>
+            <tag> backend </tag>
             
             <tag> conf </tag>
+            
+            <tag> server </tag>
             
         </tags>
       
@@ -1066,9 +1087,9 @@
             
             <tag> roadmap </tag>
             
-            <tag> network </tag>
-            
             <tag> dns </tag>
+            
+            <tag> network </tag>
             
         </tags>
       
